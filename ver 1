@@ -1,0 +1,10 @@
+# txt dictionary
+cat /usr/share/dict/words > words.txt
+# or options:  https://raw.githubusercontent.com/sujithps/Dictionary/master/Oxford%20English%20Dictionary.txt
+
+
+with open("br-utf8.txt", encoding="utf-8") as file:
+    dict_en = file.read().splitlines() 
+
+# listing the words, by specifying their environment with regex
+list(set(word.upper() for word in dict_en if word "REGEX" and word.isalpha()))
